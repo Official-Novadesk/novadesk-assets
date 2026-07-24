@@ -1,0 +1,21 @@
+{
+  "name": "areaGraphExamples",
+  "main": "index.js",
+  "version": "1.0.0.0",
+  "author": "nstechbytes",
+  "description": "Examples for the areaGraph Element",
+  "icon": "assets/icon.ico",
+  "preview": "defaultPreview.png",
+  "excludeItems": [],
+  "setup": {
+    "createDesktopShortcut": true,
+    "createStartupShortcut": false,
+    "runOnStartup": false,
+    "installDir": "%ProgramFiles%\\areaGraphExamples",
+    "startMenuFolder": "areaGraphExamples",
+    "setupName": "setup",
+    "setupIcon": "assets/icon.ico",
+    "enableUninstall": true,
+    "launchAfterInstall": false
+  }
+}
