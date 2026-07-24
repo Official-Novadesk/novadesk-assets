@@ -14,7 +14,7 @@ import * as system from "system";
 const myWindow = new widgetWindow({
     id:              "areaGraphExamples",
     width:           1020,
-    height:          1020,
+    height:          2100,   // tall enough for all 11 rows + bonus sections
     script:          "ui/script.ui.js",
     backgroundColor: "rgba(18, 18, 24, 0.97)",
 });
