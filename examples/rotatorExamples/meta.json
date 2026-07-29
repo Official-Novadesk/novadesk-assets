@@ -1,0 +1,21 @@
+{
+  "name": "rotatorExamples",
+  "main": "index.js",
+  "version": "1.0.0.0",
+  "author": "nstechbytes",
+  "description": "Examples for the Rotator Element — value, minValue, maxValue, startAngle, rotationAngle, offsetX, offsetY, valueRemainder, imageAlpha, grayscale",
+  "icon": "assets/icon.ico",
+  "preview": "defaultPreview.png",
+  "excludeItems": [],
+  "setup": {
+    "createDesktopShortcut": true,
+    "createStartupShortcut": false,
+    "runOnStartup": false,
+    "installDir": "%ProgramFiles%\\rotatorExamples",
+    "startMenuFolder": "rotatorExamples",
+    "setupName": "setup",
+    "setupIcon": "assets/icon.ico",
+    "enableUninstall": true,
+    "launchAfterInstall": false
+  }
+}
