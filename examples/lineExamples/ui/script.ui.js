@@ -706,7 +706,6 @@ ui.addLine({
     data: [10,12,15,11,14,13,16,12,10,14,11,15,13,12,10],
     rangeMin: 0, rangeMax: 100,
     lineColor: "#00ff88", lineWidth: 3,
-    backgroundColor: "rgba(255,255,255,0.05)",
     // pixelHitTest: true — click must land within lineWidth/2 + 1px of the line path
     pixelHitTest: true,
     mouseEventCursor: true, mouseEventCursorName: "cross",

@@ -1,0 +1,21 @@
+{
+  "name": "histogramExamples",
+  "main": "index.js",
+  "version": "1.0.0.0",
+  "author": "nstechbytes",
+  "description": "Examples for the Histogram Element — data, data2, primaryColor, secondaryColor, bothColor, autoRange, graphStart, graphOrientation, flip",
+  "icon": "assets/icon.ico",
+  "preview": "defaultPreview.png",
+  "excludeItems": [],
+  "setup": {
+    "createDesktopShortcut": true,
+    "createStartupShortcut": false,
+    "runOnStartup": false,
+    "installDir": "%ProgramFiles%\\histogramExamples",
+    "startMenuFolder": "histogramExamples",
+    "setupName": "setup",
+    "setupIcon": "assets/icon.ico",
+    "enableUninstall": true,
+    "launchAfterInstall": false
+  }
+}

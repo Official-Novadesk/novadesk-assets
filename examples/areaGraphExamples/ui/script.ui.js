@@ -557,6 +557,7 @@ ipcRenderer.on("data:tick", function (event, payloadArg) {
     var d;
     try { d = JSON.parse(raw); } catch (e) { return; }
 
+    ui.beginUpdate();
     // ── Row 1 right: empty → filling ─────────────────────────
     ui.setElementProperties("ex-data-live", { data: d.cpuHistory });
     ui.setElementProperties("c1b", {
@@ -573,4 +574,5 @@ ipcRenderer.on("data:tick", function (event, payloadArg) {
         tooltipText: "Current CPU: " + d.cpu.toFixed(1) +
                      "%\nHover any graph to see its tooltip.",
     });
+    ui.endUpdate();
 });

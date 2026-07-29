@@ -532,7 +532,6 @@ ui.addBar({
     id: "bar-pht", x: COL2_X, y: R11_Y + GAP,
     width: COL_W, height: BH,
     value: 0.35, barColor: "#00ff88", barCornerRadius: BH / 2,
-    backgroundColor: "rgba(255,255,255,0.08)",
     backgroundColorRadius: BH / 2,
     pixelHitTest: true,
     mouseEventCursor: true, mouseEventCursorName: "cross",
@@ -566,6 +565,7 @@ ipcRenderer.on("data:tick", function (event, payloadArg) {
     var cc = cv < 0.5 ? "#00b4ff" : cv < 0.8 ? "#ffaa00" : "#ff3333";
     var mc = mv < 0.5 ? "#00ff88" : mv < 0.8 ? "#ffaa00" : "#ff3333";
 
+    ui.beginUpdate();
     ui.setElementProperties("live-cpu",   { value: cv, barColor: cc });
     ui.setElementProperties("live-mem",   { value: mv, barColor: mc });
     ui.setElementProperties("live-cpu-v", { value: cv, barColor: cc });
@@ -575,4 +575,5 @@ ipcRenderer.on("data:tick", function (event, payloadArg) {
     ui.setElementProperties("tt-standard", {
         tooltipText: "CPU: " + d.cpu.toFixed(1) + "%\nMEM: " + d.mem.toFixed(1) + "%",
     });
+    ui.endUpdate();
 });
