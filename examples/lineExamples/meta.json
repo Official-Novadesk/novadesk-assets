@@ -1,0 +1,21 @@
+{
+  "name": "lineExamples",
+  "main": "index.js",
+  "version": "1.0.0.0",
+  "author": "nstechbytes",
+  "description": "Examples for the Line Element — lineCount, data, lineColor, lineWidth, lineScale, maxPoints, rangeMin/Max, autoRange, graphStart, graphOrientation, flip, horizontalLines, transformStroke",
+  "icon": "assets/icon.ico",
+  "preview": "defaultPreview.png",
+  "excludeItems": [],
+  "setup": {
+    "createDesktopShortcut": true,
+    "createStartupShortcut": false,
+    "runOnStartup": false,
+    "installDir": "%ProgramFiles%\\lineExamples",
+    "startMenuFolder": "lineExamples",
+    "setupName": "setup",
+    "setupIcon": "assets/icon.ico",
+    "enableUninstall": true,
+    "launchAfterInstall": false
+  }
+}
