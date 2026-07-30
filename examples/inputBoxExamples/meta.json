@@ -1,0 +1,21 @@
+{
+  "name": "inputBoxExamples",
+  "main": "index.js",
+  "version": "1.0.0.0",
+  "author": "nstechbytes",
+  "description": "Examples for the InputBox Element — text, placeholder, fontColor, fillColor, border, borderFocusColor, password, multiline, inputType, allowedChars, onChange, onEnter, onFocus, onBlur, onInvalidInput",
+  "icon": "assets/icon.ico",
+  "preview": "defaultPreview.png",
+  "excludeItems": [],
+  "setup": {
+    "createDesktopShortcut": true,
+    "createStartupShortcut": false,
+    "runOnStartup": false,
+    "installDir": "%ProgramFiles%\\inputBoxExamples",
+    "startMenuFolder": "inputBoxExamples",
+    "setupName": "setup",
+    "setupIcon": "assets/icon.ico",
+    "enableUninstall": true,
+    "launchAfterInstall": false
+  }
+}
