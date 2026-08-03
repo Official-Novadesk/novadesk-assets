@@ -1,0 +1,21 @@
+{
+  "name": "shapeExamples",
+  "main": "index.js",
+  "version": "1.0.0.0",
+  "author": "nstechbytes",
+  "description": "Examples for the Shape Element — rectangle, rounded corner, ellipse, line, arc, curve, path, line caps, line joins, dash patterns, and shape combining operations",
+  "icon": "assets/icon.ico",
+  "preview": "defaultPreview.png",
+  "excludeItems": [],
+  "setup": {
+    "createDesktopShortcut": true,
+    "createStartupShortcut": false,
+    "runOnStartup": false,
+    "installDir": "%ProgramFiles%\\shapeExamples",
+    "startMenuFolder": "shapeExamples",
+    "setupName": "setup",
+    "setupIcon": "assets/icon.ico",
+    "enableUninstall": true,
+    "launchAfterInstall": false
+  }
+}
