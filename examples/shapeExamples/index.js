@@ -32,4 +32,4 @@ setInterval(function () {
         wave: wave,
         tick: tick,
     }));
-}, 100);
+}, 1000);

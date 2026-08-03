@@ -257,9 +257,7 @@ ui.addShape({
     clockwise: true,
     fillColor: "rgba(0,0,0,0)",
     strokeColor: "linearGradient(90, #00ffff, #00ff88)",
-    strokeWidth: 14,
-    strokeStartCap: "Round",
-    strokeEndCap: "Round"
+    strokeWidth: 14
 });
 
 ui.addText({
@@ -302,9 +300,7 @@ ui.addShape({
     clockwise: true,
     fillColor: "rgba(0,0,0,0)",
     strokeColor: "linearGradient(90, #7700ff, #ff0055)",
-    strokeWidth: 14,
-    strokeStartCap: "Round",
-    strokeEndCap: "Round"
+    strokeWidth: 14
 });
 
 ui.addText({
@@ -729,8 +725,10 @@ ipcRenderer.on("data:tick", function (event, payloadArg) {
     var tick = d.tick;
 
     // Convert metrics to angles for our vector Arc gauges (135° to 405°)
-    var cpuAngle = 135 + (cpu / 100) * 270;
-    var memAngle = 135 + (mem / 100) * 270;
+    // Clamp to a minimum 2° sweep so arcs are hidden at zero rather than
+    // rendering as a leaf from overlapping flat caps.
+    var cpuAngle = cpu > 0 ? 135 + Math.max(2, (cpu / 100) * 270) : 135;
+    var memAngle = mem > 0 ? 135 + Math.max(2, (mem / 100) * 270) : 135;
 
     // Calculate dynamic bezier coordinates based on our slow wave
     // Quadratic Control Y oscillates between ROW2_Y+60 and ROW2_Y+180
