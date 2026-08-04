@@ -1,0 +1,21 @@
+{
+  "name": "bitmapExamples",
+  "main": "index.js",
+  "version": "1.0.0.0",
+  "author": "nstechbytes",
+  "description": "Examples for the Bitmap Element — multi-digit number display, single-frame gauges, sprite sheet strips, bitmapZeroFrame, bitmapExtend, bitmapDigits, bitmapAlign, bitmapSeparation, color filters, and live metric feeds",
+  "icon": "assets/icon.ico",
+  "preview": "defaultPreview.png",
+  "excludeItems": [],
+  "setup": {
+    "createDesktopShortcut": true,
+    "createStartupShortcut": false,
+    "runOnStartup": false,
+    "installDir": "%ProgramFiles%\\bitmapExamples",
+    "startMenuFolder": "bitmapExamples",
+    "setupName": "setup",
+    "setupIcon": "assets/icon.ico",
+    "enableUninstall": true,
+    "launchAfterInstall": false
+  }
+}
