@@ -1,0 +1,21 @@
+{
+  "name": "imageExamples",
+  "main": "index.js",
+  "version": "1.0.0.0",
+  "author": "nstechbytes",
+  "description": "Examples for the Image Element — preserveAspectRatio, imageAlpha, imageTint, grayscale, imageFlip, imageCrop, tile, scaleMargins, colorMatrix, fallbackPath, and URL loading",
+  "icon": "assets/icon.ico",
+  "preview": "defaultPreview.png",
+  "excludeItems": [],
+  "setup": {
+    "createDesktopShortcut": true,
+    "createStartupShortcut": false,
+    "runOnStartup": false,
+    "installDir": "%ProgramFiles%\\imageExamples",
+    "startMenuFolder": "imageExamples",
+    "setupName": "setup",
+    "setupIcon": "assets/icon.ico",
+    "enableUninstall": true,
+    "launchAfterInstall": false
+  }
+}
