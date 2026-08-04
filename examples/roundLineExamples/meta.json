@@ -1,0 +1,21 @@
+{
+  "name": "roundLineExamples",
+  "main": "index.js",
+  "version": "1.0.0.0",
+  "author": "nstechbytes",
+  "description": "Examples for the RoundLine Element — value, radius, thickness, endThickness (tapering), startAngle, totalAngle, clockwise, capType, dashArray, ticks, gradients, and real-time metric gauges",
+  "icon": "assets/icon.ico",
+  "preview": "defaultPreview.png",
+  "excludeItems": [],
+  "setup": {
+    "createDesktopShortcut": true,
+    "createStartupShortcut": false,
+    "runOnStartup": false,
+    "installDir": "%ProgramFiles%\\roundLineExamples",
+    "startMenuFolder": "roundLineExamples",
+    "setupName": "setup",
+    "setupIcon": "assets/icon.ico",
+    "enableUninstall": true,
+    "launchAfterInstall": false
+  }
+}
