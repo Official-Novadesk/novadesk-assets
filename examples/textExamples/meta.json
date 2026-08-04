@@ -1,0 +1,21 @@
+{
+  "name": "textExamples",
+  "main": "index.js",
+  "version": "1.0.0.0",
+  "author": "nstechbytes",
+  "description": "Examples for the Text Element — typography, font weights, linear/radial font gradients, fontShadow (glow & 3D), 9-way alignment, textClip (wrap/ellipsis), inline rich text markup tags, and interactive text selection",
+  "icon": "assets/icon.ico",
+  "preview": "defaultPreview.png",
+  "excludeItems": [],
+  "setup": {
+    "createDesktopShortcut": true,
+    "createStartupShortcut": false,
+    "runOnStartup": false,
+    "installDir": "%ProgramFiles%\\textExamples",
+    "startMenuFolder": "textExamples",
+    "setupName": "setup",
+    "setupIcon": "assets/icon.ico",
+    "enableUninstall": true,
+    "launchAfterInstall": false
+  }
+}
