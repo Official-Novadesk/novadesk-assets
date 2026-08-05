@@ -1,0 +1,21 @@
+{
+  "name": "layoutBoxExamples",
+  "main": "index.js",
+  "version": "1.0.0.0",
+  "author": "nstechbytes",
+  "description": "Examples for the LayoutBox Element — flex layout (row/column/gap/align/justify), backgroundColor, borderRadius, borderStyle (solid/dashed/dotted/double/groove/ridge), boxShadow (single/multi/inset/glow), display:none, and display:list-item with all listStyleType markers.",
+  "icon": "assets/icon.ico",
+  "preview": "defaultPreview.png",
+  "excludeItems": [],
+  "setup": {
+    "createDesktopShortcut": true,
+    "createStartupShortcut": false,
+    "runOnStartup": false,
+    "installDir": "%ProgramFiles%\\layoutBoxExamples",
+    "startMenuFolder": "layoutBoxExamples",
+    "setupName": "setup",
+    "setupIcon": "assets/icon.ico",
+    "enableUninstall": true,
+    "launchAfterInstall": false
+  }
+}
