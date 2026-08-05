@@ -1,0 +1,21 @@
+{
+  "name": "buttonExamples",
+  "main": "index.js",
+  "version": "1.0.0.0",
+  "author": "nstechbytes",
+  "description": "Examples for the Button Element — 3-frame sprite strips, buttonAction, hover/click states, transparent hit-testing, tint/grayscale image effects, and interactive live controls.",
+  "icon": "assets/icon.ico",
+  "preview": "defaultPreview.png",
+  "excludeItems": [],
+  "setup": {
+    "createDesktopShortcut": true,
+    "createStartupShortcut": false,
+    "runOnStartup": false,
+    "installDir": "%ProgramFiles%\\buttonExamples",
+    "startMenuFolder": "buttonExamples",
+    "setupName": "setup",
+    "setupIcon": "assets/icon.ico",
+    "enableUninstall": true,
+    "launchAfterInstall": false
+  }
+}
