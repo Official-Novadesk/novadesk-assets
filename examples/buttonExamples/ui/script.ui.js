@@ -77,11 +77,11 @@ ui.addShape({
     type: "rectangle",
     x: PAD, y: 6, width: W - PAD * 2, height: 22,
     radius: 6,
-    fillColor: "rgba(0,0,0,0)"
+    fillColor: "rgba(0, 0, 0, 0.69)"
 });
 ui.addText({
     id: "status-text",
-    x: PAD, y: 7,
+    x: PAD + 10, y: 10,
     text: "Hover or click any button below to see feedback here...",
     fontSize: 11,
     fontColor: "#3a4a5a",
@@ -204,7 +204,7 @@ Y += 10; // card padding
 // ─────────────────────────────────────────────────────────────
 sectionTitle("s2", PAD, Y, "2 · Shape Variants — Pill, Icon & Tag");
 Y += 28;
-cardBg("s2", PAD, Y, W - PAD * 2, 110);
+cardBg("s2", PAD, Y, W - PAD * 2, 130);
 Y += 16;
 
 // Pill button
@@ -238,16 +238,9 @@ ui.addButton({
     onMouseLeave: function () { setStatus("Left icon button"); },
     buttonAction: function () { setStatus("✓ Square icon button clicked!", "#7090cc"); }
 });
-ui.addText({
-    id: "icon-label",
-    x: BX + 90 + 18, y: Y + 16,
-    text: "\uE7E8",
-    fontSize: 20, fontColor: "#8cb0ff",
-    fontFace: "Segoe MDL2 Assets"
-});
-label("lbl-icon-hint", BX + 160, Y + 14, "52×52 square — strip is 156×52");
+label("lbl-icon-hint", BX + 160, Y + 16, "52×52 square — strip is 156×52");
 
-Y += 62;
+Y += 76;
 
 // ─────────────────────────────────────────────────────────────
 // SECTION 3 — Image Effects (tint, grayscale, alpha, flip)
@@ -257,27 +250,30 @@ Y += 28;
 cardBg("s3", PAD, Y, W - PAD * 2, 190);
 Y += 16;
 
+// NOTE: Effects section uses btn-neutral.png (white/light base) so tints show correct hue.
+// Applying imageTint to a saturated color (cyan) multiplies channels and produces dark results.
+
 // Normal (reference)
-ui.addText({ id: "lbl-eff-ref", x: BX, y: Y, text: "Normal", fontSize: 11, fontColor: "#556070" });
+ui.addText({ id: "lbl-eff-ref", x: BX, y: Y, text: "Normal (neutral)", fontSize: 11, fontColor: "#556070" });
 ui.addButton({
     id: "btn-eff-ref",
     x: BX, y: Y + 18,
     width: 120, height: 40,
-    buttonImageName: "./assets/btn-primary.png",
+    buttonImageName: "./assets/btn-neutral.png",
     mouseEventCursor: true, mouseEventCursorName: "hand",
-    buttonAction: function () { setStatus("Reference — no effects applied"); }
+    buttonAction: function () { setStatus("Reference — white/neutral base, no effects applied"); }
 });
 
 // Tinted red
-ui.addText({ id: "lbl-eff-tint", x: BX + 140, y: Y, text: "imageTint", fontSize: 11, fontColor: "#556070" });
+ui.addText({ id: "lbl-eff-tint", x: BX + 140, y: Y, text: "imageTint: red", fontSize: 11, fontColor: "#556070" });
 ui.addButton({
     id: "btn-eff-tint",
     x: BX + 140, y: Y + 18,
     width: 120, height: 40,
-    buttonImageName: "./assets/btn-primary.png",
-    imageTint: "rgba(255,80,80,0.7)",
+    buttonImageName: "./assets/btn-neutral.png",
+    imageTint: "rgba(255,80,80,0.85)",
     mouseEventCursor: true, mouseEventCursorName: "hand",
-    buttonAction: function () { setStatus("imageTint: 'rgba(255,80,80,0.7)' — red wash applied", "#ff5050"); }
+    buttonAction: function () { setStatus("imageTint: 'rgba(255,80,80,0.85)' on white base — shows clean red", "#ff5050"); }
 });
 
 // Grayscale
@@ -286,7 +282,7 @@ ui.addButton({
     id: "btn-eff-gs",
     x: BX + 280, y: Y + 18,
     width: 120, height: 40,
-    buttonImageName: "./assets/btn-primary.png",
+    buttonImageName: "./assets/btn-neutral.png",
     grayscale: true,
     mouseEventCursor: true, mouseEventCursorName: "hand",
     buttonAction: function () { setStatus("grayscale: true — full desaturation applied"); }
@@ -298,10 +294,10 @@ ui.addButton({
     id: "btn-eff-alpha",
     x: BX + 420, y: Y + 18,
     width: 120, height: 40,
-    buttonImageName: "./assets/btn-primary.png",
+    buttonImageName: "./assets/btn-neutral.png",
     imageAlpha: 120,
     mouseEventCursor: true, mouseEventCursorName: "hand",
-    buttonAction: function () { setStatus("imageAlpha: 120 — 47% opacity applied"); }
+    buttonAction: function () { setStatus("imageAlpha: 120 — 47% opacity (semi-transparent)"); }
 });
 Y += 68;
 
@@ -311,7 +307,7 @@ ui.addButton({
     id: "btn-eff-fh",
     x: BX, y: Y + 18,
     width: 120, height: 40,
-    buttonImageName: "./assets/btn-primary.png",
+    buttonImageName: "./assets/btn-neutral.png",
     imageFlip: "horizontal",
     mouseEventCursor: true, mouseEventCursorName: "hand",
     buttonAction: function () { setStatus("imageFlip: 'horizontal' — sprite mirrored left-right"); }
@@ -323,22 +319,22 @@ ui.addButton({
     id: "btn-eff-fv",
     x: BX + 140, y: Y + 18,
     width: 120, height: 40,
-    buttonImageName: "./assets/btn-primary.png",
+    buttonImageName: "./assets/btn-neutral.png",
     imageFlip: "vertical",
     mouseEventCursor: true, mouseEventCursorName: "hand",
     buttonAction: function () { setStatus("imageFlip: 'vertical' — sprite flipped top-bottom"); }
 });
 
-// Gold tint accent
+// Gold tint on white base
 ui.addText({ id: "lbl-eff-gold", x: BX + 280, y: Y, text: "imageTint: gold", fontSize: 11, fontColor: "#556070" });
 ui.addButton({
     id: "btn-eff-gold",
     x: BX + 280, y: Y + 18,
     width: 120, height: 40,
-    buttonImageName: "./assets/btn-primary.png",
-    imageTint: "rgba(255,190,30,0.8)",
+    buttonImageName: "./assets/btn-neutral.png",
+    imageTint: "rgba(255,190,30,0.85)",
     mouseEventCursor: true, mouseEventCursorName: "hand",
-    buttonAction: function () { setStatus("imageTint: gold rgba(255,190,30,0.8)", "#ffbe1e"); }
+    buttonAction: function () { setStatus("imageTint: gold rgba(255,190,30,0.85) on white base", "#ffbe1e"); }
 });
 
 Y += 68;
@@ -351,12 +347,12 @@ Y += 28;
 cardBg("s4", PAD, Y, W - PAD * 2, 150);
 var playY = Y + 20;
 
-// Target button to manipulate
+// TARGET: Live playground uses neutral base so all tint/grayscale/alpha effects are clearly visible
 ui.addButton({
     id: "btn-live-target",
     x: BX, y: playY,
     width: 160, height: 48,
-    buttonImageName: "./assets/btn-primary.png",
+    buttonImageName: "./assets/btn-neutral.png",
     mouseEventCursor: true, mouseEventCursorName: "hand",
     onMouseOver: function () { setStatus("Live target button — hovered"); },
     onMouseLeave: function () { setStatus("Live target button — idle"); },
